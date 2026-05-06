@@ -20,12 +20,19 @@ body {
 
 /* ---------- Mobile-first ---------- */
 .card {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     background-color: var(--White);
 }
 
 .card>img {
     width: 100%;
+}
+
+.desktop-img,
+.tablet-img {
+    display: none;
 }
 
 .container {
@@ -94,14 +101,14 @@ body {
 }
 
 .btn:hover {
-    background: linear-gradient( to right, var(--Red), rgb(250, 137, 62));
+    background: linear-gradient(to right, var(--Red), rgb(250, 137, 62));
     cursor: pointer;
 }
 
 /* ---------- Success message ---------- */
 .success-msg {
-    min-height: 100vh;
     max-width: 100vw;
+    background-color: var(--White);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -139,5 +146,135 @@ body {
     font-size: 16px;
     color: var(--White);
     font-weight: 700;
-    margin-top: auto;
+    margin-top: 40%;
+}
+
+/* ---------- Tablet Responsive ---------- */
+@media screen and (min-width: 481px) and (max-width: 899px) {
+    body {
+        background-color: var(--Blue-800);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .mobile-img,
+    .desktop-img {
+        display: none;
+    }
+
+    .tablet-img {
+        display: flex;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .success-msg {
+        display: flex;
+    }
+
+    /* ----------- Success Message ---------- */
+    .success-msg {
+        display: none;
+        max-width: 350px;
+        border-radius: 25px;
+    }
+
+    .success-msg img {
+        margin: 0;
+        width: 50px;
+    }
+
+    .success-msg p {
+        font-size: 12px;
+    }
+
+    .success-msg button {
+        margin-top: 2rem;
+        padding: 1rem;
+        font-size: 14px;
+    }
+}
+
+/* ---------- Desktop Responsive ---------- */
+@media screen and (min-width: 900px) {
+    body {
+        background-color: var(--Blue-800);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .mobile-img,
+    .tablet-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: flex;
+        max-width: 40%;
+        object-fit: cover;
+    }
+
+    .container {
+        /* flex: 1; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 1rem;
+        margin-left: 2rem;
+    }
+
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .container p {
+        margin-bottom: 1rem;
+    }
+
+    .container form {
+        margin-top: 1.5rem;
+    }
+
+    /* ----------- Success Message ---------- */
+    .success-msg {
+        display: none;
+        max-width: 350px;
+        border-radius: 25px;
+    }
+
+    .success-msg img {
+        margin: 0;
+        width: 50px;
+    }
+
+    .success-msg p {
+        font-size: 12px;
+    }
+
+    .success-msg button {
+        margin-top: 2rem;
+        padding: 1rem;
+        font-size: 14px;
+    }
 }
