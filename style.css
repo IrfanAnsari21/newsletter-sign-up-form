@@ -74,11 +74,20 @@ body {
 .container form label {
     font-size: 12px;
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container form label span {
+    color: var(--Red);
+    display: none;
 }
 
 .container form input {
     margin: 1rem 0;
     padding: 1.2rem;
+    border: none;
+    outline: none;
     border-radius: 7px;
     border: 1px solid var(--Grey);
 }
@@ -88,10 +97,11 @@ body {
     color: var(--Grey);
 }
 
-.container button {
+.container form button {
     width: 100%;
     padding: 1.2rem;
     border: none;
+    outline: none;
     border-radius: 7px;
     background-color: var(--Blue-800);
     font-size: 16px;
@@ -131,6 +141,7 @@ body {
     margin-top: 1.5rem;
     color: var(--Blue-700);
     font-weight: 500;
+    line-height: 25px;
 }
 
 .success-msg p strong {
@@ -141,6 +152,7 @@ body {
     width: 100%;
     padding: 1.2rem;
     border: none;
+    outline: none;
     border-radius: 7px;
     background-color: var(--Blue-800);
     font-size: 16px;
@@ -184,17 +196,13 @@ body {
     /* ----------- Success Message ---------- */
     .success-msg {
         display: none;
-        max-width: 350px;
+        max-width: 400px;
         border-radius: 25px;
     }
 
     .success-msg img {
         margin: 0;
         width: 50px;
-    }
-
-    .success-msg p {
-        font-size: 12px;
     }
 
     .success-msg button {
@@ -259,17 +267,13 @@ body {
     /* ----------- Success Message ---------- */
     .success-msg {
         display: none;
-        max-width: 350px;
+        max-width: 400px;
         border-radius: 25px;
     }
 
     .success-msg img {
         margin: 0;
         width: 50px;
-    }
-
-    .success-msg p {
-        font-size: 12px;
     }
 
     .success-msg button {
